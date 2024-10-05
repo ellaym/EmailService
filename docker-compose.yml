@@ -1,0 +1,9 @@
+version: '3'
+services:
+  emailservice:
+    build: .
+    ports:
+      - "5501:5501"
+    env_file:
+      - .env
+    restart: unless-stopped
